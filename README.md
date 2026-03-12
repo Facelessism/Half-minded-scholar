@@ -91,6 +91,42 @@ The orchestrator manages iterations while agents continuously analyze and refine
 
 ---
 
+## Project Structure 
+(Initial structure that I think is what we should start with)
+```
+half-minded-scholar/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── requirements.txt
+├── main.py
+├── config.py
+├── prompts/
+│   ├── initial_solution.txt
+│   ├── critique_agent.txt
+│   └── synthesis.txt
+├── core/
+│   ├── debate_loop.py
+│   ├── synthesizer.py
+│   ├── saturation.py
+│   └── state.py
+├── agents/
+│   ├── base_agent.py
+│   ├── critique_agent.py
+│   └── agent_factory.py
+├── llm/
+│   ├── llm_client.py
+│   └── embeddings.py
+├── utils/
+│   ├── similarity.py
+│   └── json_parser.py
+├── experiments/
+│   ├── sample_problems.txt
+│   └── run_experiment.py
+└── logs/
+    └── debate_history.json
+```
+
 ## Tech Stack
 ```
 - Backend  
